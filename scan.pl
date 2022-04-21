@@ -1,4 +1,5 @@
 # Veriz0wn 2022
+# https://github.com/Curt-Lucas/Wordpress-Post-Scanner
 # https://github.com/Curt-Lucas/Vulnerable
 
 use strict;
