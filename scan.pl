@@ -1,3 +1,6 @@
+# Veriz0wn 2022
+# https://github.com/Curt-Lucas/Vulnerable
+
 use strict;
 use warnings;
 require HTTP::Request;
@@ -12,7 +15,7 @@ while( my $line = <$info>)  {
 	
 	for ($b=1; $b<=50; $b+=1) {
         
-        $res = HTTP::Request->new(GET => "http://${line}/?s=");
+	$res = HTTP::Request->new(GET => "http://${line}/page/${b}/?s=");
 
         while ($res =~ m/http\%3a\/\/(.+?)\"/g) {
             
