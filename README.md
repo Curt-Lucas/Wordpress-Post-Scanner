@@ -4,6 +4,9 @@ Scan through a list of wordpress websites to harvest post urls
 ## Contents
  + 100,000 Wordpress Websites
 
+## What's Next?
+Mass post commenting
+
 ## Don't Forget to Donate
 CashApp: $yahooadmin 
 
