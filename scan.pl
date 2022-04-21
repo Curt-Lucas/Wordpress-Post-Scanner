@@ -7,7 +7,7 @@ use warnings;
 require HTTP::Request;
 
 my $file = 'urls.txt';
-
+open (fh, ">", "found_urls.txt");
 open my $info, $file or die "Could not open $file: $!";
 
 while( my $line = <$info>)  {   
@@ -20,11 +20,12 @@ while( my $line = <$info>)  {
 
         while ($res =~ m/http\%3a\/\/(.+?)\"/g) {
             
-            my $link = $1;
+			print fh $1;
         }
     }
 	
     last if $. == 2;
 }
 
+close(fh) or "Couldn't close the file"; 
 close $info;
