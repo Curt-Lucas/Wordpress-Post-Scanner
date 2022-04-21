@@ -6,7 +6,7 @@ use strict;
 use warnings;
 require HTTP::Request;
 
-my $file = 'urls.txt';
+my $file = 'urls_test.txt';
 open (fh, ">", "found_urls.txt");
 open my $info, $file or die "Could not open $file: $!";
 
@@ -14,7 +14,7 @@ while( my $line = <$info>)  {
 
     print $line;
 	
-	for ($b=1; $b<=50; $b+=1) {
+	for ($b=1; $b<=10; $b+=1) {
         
 	$res = HTTP::Request->new(GET => "http://${line}/page/${b}/?s=");
 
